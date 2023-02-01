@@ -1,34 +1,36 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
-import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { setName } from '../store/slices/nameUser.slice'
+import React from "react";
+import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setName } from "../store/slices/nameUser.slice";
 
-const InputHome = ({setIsLogged}) => {
+const InputHome = ({ setIsLogged }) => {
+  const { handleSubmit, reset, register } = useForm();
 
-    const { handleSubmit, reset, register } = useForm ()
+  const dispatch = useDispatch();
 
-    const dispatch = useDispatch()
+  const navigate = useNavigate();
 
-    const navigate = useNavigate()
+  const submit = (data) => {
+    dispatch(setName(data.nameUser));
+    reset({
+      nameUser: "",
+    });
+    navigate("/pokedex");
+  };
 
-    const submit = data => {
-        dispatch(setName(data.nameUser))
-        reset({
-            nameUser: ''
-        })
-        navigate('/pokedex')
-    }
-
-    const clickLogged = () => setIsLogged(true)
-    
+  const clickLogged = () => setIsLogged(true);
 
   return (
-    <form onSubmit={ handleSubmit (submit) }>
-        <input type="text" placeholder='Please, enter your name' { ...register('nameUser', {required : true}) }/>
-        <button onClick={clickLogged}>Ok!</button>
+    <form onSubmit={handleSubmit(submit)}>
+      <input
+        type="text"
+        placeholder="Please, enter your name"
+        {...register("nameUser", { required: true })}
+      />
+      <button onClick={clickLogged}>Ok!</button>
     </form>
-  )
-}
+  );
+};
 
-export default InputHome
+export default InputHome;
