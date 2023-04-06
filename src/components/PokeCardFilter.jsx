@@ -19,7 +19,9 @@ const PokeCardFilter = ({typeUrl}) => {
     const clickCard = () => navigate ( `/pokedex/${pokemon.id}` ) 
 
   return (
-    <article className='pokeCard' onClick={clickCard}>
+    <article className={`pokeCard pokeColors ${pokemon?.types[0].type.name === 'normal' 
+    ? (pokemon.types[1] ? pokemon.types[1].type.name : '') 
+      : pokemon?.types[0].type.name}`} onClick={clickCard}>
         <img className='pok' src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
             <h2>{pokemon?.name.toUpperCase()}</h2>
             <hr />

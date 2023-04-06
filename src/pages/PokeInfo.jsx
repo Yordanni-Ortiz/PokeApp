@@ -24,7 +24,10 @@ const PokeInfo = () => {
 
   return (
     <article className='pokeInfoCard'>
-      <div className='baseInfo'>
+      <div className={`baseInfo pokeColors ${pokeInfo?.types[0].type.name === 'normal' 
+        ? (pokeInfo.types[1] ? pokeInfo.types[1].type.name : '') 
+        : pokeInfo?.types[0].type.name}`}
+      >
         <div className='pokeImage'>
           <img src={pokeInfo?.sprites.other['official-artwork'].front_default} alt="pokemon picture" className='pokemonPicture'/>
         </div>
@@ -36,7 +39,10 @@ const PokeInfo = () => {
           <p><b>Base Experience</b><br /><b className='b2'>{pokeInfo?.base_experience}</b></p>
         </div>
       </div>
-      <div className='abilities'>
+      <div className={`abilities pokeColors ${pokeInfo?.types[0].type.name === 'normal' 
+        ? (pokeInfo.types[1] ? pokeInfo.types[1].type.name : '') 
+        : pokeInfo?.types[0].type.name}`}
+      >
         <h2>Abilities</h2>
         <hr />
         <div className='divition2'>
@@ -44,7 +50,10 @@ const PokeInfo = () => {
           <p>{pokeInfo?.abilities[1]?.ability.name}</p>
         </div>
       </div>
-      <div className='type'>
+      <div className={`type pokeColors ${pokeInfo?.types[0].type.name === 'normal' 
+        ? (pokeInfo.types[1] ? pokeInfo.types[1].type.name : '') 
+        : pokeInfo?.types[0].type.name}`}
+      >
         <h2>Type</h2>
         <hr />
         <div className='divition3'>
@@ -52,7 +61,10 @@ const PokeInfo = () => {
           <p>{pokeInfo?.types[1]?.type.name}</p>
         </div>
       </div>
-      <div className='moves'>
+      <div className={`moves pokeColors ${pokeInfo?.types[0].type.name === 'normal' 
+        ? (pokeInfo.types[1] ? pokeInfo.types[1].type.name : '') 
+        : pokeInfo?.types[0].type.name}`}
+      >
           <PokeMoves pokeInfo={pokeInfo}/>
       </div>
       <div className='goBackButton'>

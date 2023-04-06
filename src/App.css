@@ -9,6 +9,7 @@ body{
   background-size: 100%;  
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
 }
 .App {
   text-align: center;
@@ -154,6 +155,64 @@ body{
   transform: translateY(-10px);
   box-shadow: 1px 1px 8px ;
 }
+
+
+
+.pokeColors.fighting {
+  background-color: #a52a2a54;
+}
+.pokeColors.flying {
+  background-color: #87cfeb4f;
+}
+.pokeColors.poison {
+  background-color: #9400d352;
+}
+.pokeColors.ground {
+  background-color: #8b451353;
+}
+.pokeColors.rock {
+  background-color: #3a130253;
+}
+.pokeColors.bug {
+  background-color: #9acc5050;
+}
+.pokeColors.ghost {
+  background-color: #4c008254;
+}
+.pokeColors.steel {
+  background-color: #1c1c1c83;
+}
+.pokeColors.fire {
+  background-color: #ff583351;
+}
+.pokeColors.water {
+  background-color: #3498db52;
+}
+.pokeColors.grass {
+  background-color: #32cd3252;
+}
+.pokeColors.electric {
+  background-color: #f1c40f50;
+}
+.pokeColors.psychic {
+  background-color: #ff149152;
+}
+.pokeCColors.ice {
+  background-color: #add8e653;
+}
+.pokeColors.dragon {
+  background-color: #ff8c004f;
+}
+.pokeColors.dark {
+  background-color: #48164050;
+}
+.pokeColors.fairy {
+  background-color: #ee82ee50;
+}
+
+
+
+
 .pokeCard img {
   width: 200px;
   max-height: 180px;
@@ -404,35 +463,17 @@ body{
   height: 100px;
 }
 .footer img {
-  width: 70px;
+  width: 5%;
   position: relative;
 }
 .footer div {
-display: flex;
-gap: 130px;
-}
-.inputSelector {
-  margin-bottom: 40px;
-}
-.selector{
-  color: #000000;
-  width: 250px;
   display: flex;
   justify-content: center;
-}
-.selector button {
-  padding: 2px 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  border: solid 1px;
-  font-size: 16px;
-  margin: 0;
-  margin-left: 20px;
-  height: 40px;
+  align-items: center;
+  gap: 8%;
 }
 .inputSelector {
   display: flex;
-  width: 100%;
   margin-bottom: 40px;
   margin-left: 30px;
   margin-right: 20px;
@@ -525,8 +566,22 @@ button{
   transform: translateY(-5px);
   box-shadow: 1px 1px 8px ;
 }
+.pageButton.active {
+  background-color: #006699;
+  color: #fff;
+}
+.typeSelector{
+  display: block;
+  font-size: 16px;
+  color: #444; /* LETRAS */
+  line-height: 1.3;
+  padding: .4em 1.4em .3em .8em;
+  width: 300px;
+  max-width: 100%; 
+  text-transform: uppercase;
+}
 
-@media (max-width: 500px) { 
+@media (max-width: 668px) { 
   .divition2 p {
     margin: 10px 10px;
     font-size: 14px;
@@ -539,4 +594,20 @@ button{
     margin-top: -120px;
     max-width: 300px;
   }
+  .footer div {
+    gap: 6%;
+  }
+  .footer img {
+    width: 7%;
+  }
+  .home {
+    margin-top: 100px;
+  }
+  .home .text {
+    margin-top: 40px;
+  }
+  .home .text2 {
+    margin-top: 10px;
+  }
+
  }

@@ -5,12 +5,6 @@ import Select from "react-select";
 
 const InputSelector = () => {
   const [types, setTypes] = useState();
-  const [dropDown, setDropDown] = useState(false);
-  const [selectedType, setSelectedType] = useState();
-
-  const openOrCloseDropDown = () => {
-    setDropDown(!dropDown);
-  };
 
   useEffect(() => {
     axios
@@ -20,8 +14,6 @@ const InputSelector = () => {
   }, []);
 
   const navigate = useNavigate();
-
-  const clickType = () => navigate(`/pokefilter/${selectedType}`);
 
   const typesObject = [];
 
@@ -34,13 +26,42 @@ const InputSelector = () => {
 
   const handleSelectChange = ({ value }) => {
     console.log(value);
-    setSelectedType(value);
+    navigate(`/pokefilter/${value}`);
   };
 
   return (
     <div className="selector">
-      <Select options={typesObject} onChange={handleSelectChange} />
-      <button onClick={clickType}>Filter</button>
+      <Select
+        styles={{ control: (baseStyles, state) => ({
+          ...baseStyles,
+          background: '#332626'
+          }),
+          menu: (baseStyles, state) => ({
+            ...baseStyles,
+            background: '#332626'
+          }),
+          dropdownIndicator: (baseStyles, state) => ({
+            ...baseStyles,
+            color: 'white'
+          }),
+          option: (base, state) => ({
+            ...base,
+            ':hover': {
+              backgroundColor: '#e6e6',
+              color: 'white'
+            },
+            'focus': {
+              backgroundColor: '#e6e6'
+            }
+          }),
+          
+        }} 
+        className="typeSelector" 
+        placeholder="Filter by type" 
+        options={typesObject} 
+        onChange={handleSelectChange}
+      />
+      
     </div>
   );
 };
