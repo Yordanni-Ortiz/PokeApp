@@ -73,7 +73,7 @@ const PokeFilter = () => {
         />
       </div>
       <div className="removeFilter">
-        <button onClick={removeFilter}>Remove filter</button>
+        <button className="removeFilterText" onClick={removeFilter}>Remove filter</button>
       </div>
       <div className="inputSelector">
         <InputSelector />
