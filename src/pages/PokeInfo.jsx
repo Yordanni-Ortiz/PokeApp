@@ -39,20 +39,38 @@ const PokeInfo = () => {
           />
         </div>
         <hr />
-        <h2>{pokeInfo?.name.toUpperCase()}</h2>
+        <h2 className="namePokemon">{pokeInfo?.name.toUpperCase()}</h2>
         <div className="divition1">
           <p>
-            <b>Weight</b>
+            <b className={`pokeColorsText ${
+          pokeInfo?.types[0].type.name === "normal"
+            ? pokeInfo.types[1]
+              ? pokeInfo.types[1].type.name
+              : ""
+            : pokeInfo?.types[0].type.name
+        }`}>Weight</b>
             <br />
             <b className="b2">{pokeInfo?.weight}</b>
           </p>
           <p>
-            <b>Height</b>
+            <b className={`pokeColorsText ${
+          pokeInfo?.types[0].type.name === "normal"
+            ? pokeInfo.types[1]
+              ? pokeInfo.types[1].type.name
+              : ""
+            : pokeInfo?.types[0].type.name
+        }`}>Height</b>
             <br />
             <b className="b2">{pokeInfo?.height}</b>
           </p>
           <p>
-            <b>Base Experience</b>
+            <b className={`pokeColorsText ${
+          pokeInfo?.types[0].type.name === "normal"
+            ? pokeInfo.types[1]
+              ? pokeInfo.types[1].type.name
+              : ""
+            : pokeInfo?.types[0].type.name
+        }`}>Base Experience</b>
             <br />
             <b className="b2">{pokeInfo?.base_experience}</b>
           </p>
@@ -67,7 +85,13 @@ const PokeInfo = () => {
             : pokeInfo?.types[0].type.name
         }`}
       >
-        <h2>Abilities</h2>
+        <h2 className={`pokeColorsText ${
+          pokeInfo?.types[0].type.name === "normal"
+            ? pokeInfo.types[1]
+              ? pokeInfo.types[1].type.name
+              : ""
+            : pokeInfo?.types[0].type.name
+        }`}>Abilities</h2>
         <hr />
         <div className="divition2">
           <p>{pokeInfo?.abilities[0]?.ability.name}</p>
@@ -83,7 +107,13 @@ const PokeInfo = () => {
             : pokeInfo?.types[0].type.name
         }`}
       >
-        <h2>Type</h2>
+        <h2 className={`pokeColorsText ${
+          pokeInfo?.types[0].type.name === "normal"
+            ? pokeInfo.types[1]
+              ? pokeInfo.types[1].type.name
+              : ""
+            : pokeInfo?.types[0].type.name
+        }`}>Type</h2>
         <hr />
         <div className="divition3">
           <p>{pokeInfo?.types[0]?.type.name}</p>

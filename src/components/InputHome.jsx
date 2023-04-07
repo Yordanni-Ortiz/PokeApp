@@ -28,7 +28,7 @@ const InputHome = ({ setIsLogged }) => {
         placeholder="Please, enter your name"
         {...register("nameUser", { required: true })}
       />
-      <button onClick={clickLogged}>Ok!</button>
+      <button className="button_ok" onClick={clickLogged}>Ok!</button>
     </form>
   );
 };

@@ -1,11 +1,16 @@
 import React from "react";
 
 const PokeMoves = ({ pokeInfo }) => {
-  console.log(pokeInfo);
 
   return (
     <article className="pokeMoves">
-      <h2>Principal Moves</h2>
+      <h2 className={`pokeColorsText ${
+          pokeInfo?.types[0].type.name === "normal"
+            ? pokeInfo.types[1]
+              ? pokeInfo.types[1].type.name
+              : ""
+            : pokeInfo?.types[0].type.name
+        }`}>Principal Moves</h2>
       <hr />
       <div className="movesContainer">
         <div className="bg-move">

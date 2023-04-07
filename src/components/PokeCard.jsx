@@ -32,36 +32,96 @@ const PokeCard = ({ url }) => {
         src={pokemon?.sprites.other["official-artwork"].front_default}
         alt=""
       />
-      <h2>{pokemon?.name.toUpperCase()}</h2>
+      <h2 className="namePokemon">{pokemon?.name.toUpperCase()}</h2>
       <hr />
       <div className="infoCard">
         <p>
-          <b>HP</b>
+          <b
+            className={`pokeColorsText ${
+              pokemon?.types[0].type.name === "normal"
+                ? pokemon.types[1]
+                  ? pokemon.types[1].type.name
+                  : ""
+                : pokemon?.types[0].type.name
+            }`}
+          >
+            HP
+          </b>
           <br />
           <b className="b2">{pokemon?.stats[0].base_stat}</b>
         </p>
         <p>
-          <b>Speed</b>
+          <b
+            className={`pokeColorsText ${
+              pokemon?.types[0].type.name === "normal"
+                ? pokemon.types[1]
+                  ? pokemon.types[1].type.name
+                  : ""
+                : pokemon?.types[0].type.name
+            }`}
+          >
+            Speed
+          </b>
           <br />
           <b className="b2">{pokemon?.stats[5].base_stat}</b>
         </p>
         <p>
-          <b>Attack</b>
+          <b
+            className={`pokeColorsText ${
+              pokemon?.types[0].type.name === "normal"
+                ? pokemon.types[1]
+                  ? pokemon.types[1].type.name
+                  : ""
+                : pokemon?.types[0].type.name
+            }`}
+          >
+            Attack
+          </b>
           <br />
           <b className="b2">{pokemon?.stats[1].base_stat}</b>
         </p>
         <p>
-          <b>Defense</b>
+          <b
+            className={`pokeColorsText ${
+              pokemon?.types[0].type.name === "normal"
+                ? pokemon.types[1]
+                  ? pokemon.types[1].type.name
+                  : ""
+                : pokemon?.types[0].type.name
+            }`}
+          >
+            Defense
+          </b>
           <br />
           <b className="b2">{pokemon?.stats[2].base_stat}</b>
         </p>
         <p>
-          <b>Sp.Attack</b>
+          <b
+            className={`pokeColorsText ${
+              pokemon?.types[0].type.name === "normal"
+                ? pokemon.types[1]
+                  ? pokemon.types[1].type.name
+                  : ""
+                : pokemon?.types[0].type.name
+            }`}
+          >
+            Sp.Attack
+          </b>
           <br />
           <b className="b2">{pokemon?.stats[3].base_stat}</b>
         </p>
         <p>
-          <b>Sp.Defense</b>
+          <b
+            className={`pokeColorsText ${
+              pokemon?.types[0].type.name === "normal"
+                ? pokemon.types[1]
+                  ? pokemon.types[1].type.name
+                  : ""
+                : pokemon?.types[0].type.name
+            }`}
+          >
+            Sp.Defense
+          </b>
           <br />
           <b className="b2">{pokemon?.stats[4].base_stat}</b>
         </p>
