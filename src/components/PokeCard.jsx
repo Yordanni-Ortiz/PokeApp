@@ -12,17 +12,19 @@ const PokeCard = ({ url }) => {
       .catch((error) => console.log(error));
   }, []);
 
-  // console.log(pokemon);
-
   const navigate = useNavigate();
 
   const clickCard = () => navigate(`/pokedex/${pokemon.id}`);
 
   return (
-    <article 
-      className={`pokeCard pokeColors ${pokemon?.types[0].type.name === 'normal' 
-      ? (pokemon.types[1] ? pokemon.types[1].type.name : '') 
-        : pokemon?.types[0].type.name}`} 
+    <article
+      className={`pokeCard pokeColors ${
+        pokemon?.types[0].type.name === "normal"
+          ? pokemon.types[1]
+            ? pokemon.types[1].type.name
+            : ""
+          : pokemon?.types[0].type.name
+      }`}
       onClick={clickCard}
     >
       <img

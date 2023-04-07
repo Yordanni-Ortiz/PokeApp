@@ -43,7 +43,6 @@ body{
   margin-top: -3px;
 }
 .NavBar {
-  /*background-color: #332626;*/
   margin-bottom: 20px;
   height: 50px;
   border-bottom: solid white ;
@@ -155,9 +154,6 @@ body{
   transform: translateY(-10px);
   box-shadow: 1px 1px 8px ;
 }
-
-
-
 .pokeColors.fighting {
   background-color: #a52a2a54;
 }
@@ -204,26 +200,31 @@ body{
   background-color: #ff8c004f;
 }
 .pokeColors.dark {
-  background-color: #48164050;
+  background-color: #2f4f4f50;
 }
 .pokeColors.fairy {
   background-color: #ee82ee50;
 }
-
-
-
-
 .pokeCard img {
   width: 200px;
   max-height: 180px;
   margin-top: -80px;
 }
-.pokeCard:hover .pok {
+.pokeCard .pok {
   position: relative;
-  bottom: 30px;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-out;
+  filter: drop-shadow(5px 5px 4px black);
+}
+.pokeCard:hover .pok {
   left: 10px;
-  transition-duration: 5s;
-  filter: drop-shadow( 5px 5px 4px black);
+  top: -30px;
+}
+.pokeCard:active .pok {
+  left: 10px;
+  top: -5px;
+  transition: none;
 }
 .pokeCard h2 {
   margin-bottom: 10px;
@@ -479,6 +480,10 @@ body{
   margin-right: 20px;
   justify-content: center;
 }
+.alert {
+  margin-top: -60px;
+  width: 50%;
+}
 .principalCardFilter {
   padding-bottom: 100px;
   display: flex;
@@ -608,6 +613,10 @@ button{
   }
   .home .text2 {
     margin-top: 10px;
+  }
+  .alert {
+    margin-top: -60px;
+    width: 50%;
   }
 
  }
