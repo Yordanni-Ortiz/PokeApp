@@ -32,30 +32,7 @@ const InputSelector = () => {
   return (
     <div className="selector">
       <Select
-        styles={{ control: (baseStyles, state) => ({
-          ...baseStyles,
-          background: '#332626'
-          }),
-          menu: (baseStyles, state) => ({
-            ...baseStyles,
-            background: '#332626'
-          }),
-          dropdownIndicator: (baseStyles, state) => ({
-            ...baseStyles,
-            color: 'white'
-          }),
-          option: (base, state) => ({
-            ...base,
-            ':hover': {
-              backgroundColor: '#e6e6',
-              color: 'white'
-            },
-            'focus': {
-              backgroundColor: '#e6e6'
-            }
-          }),
-          
-        }} 
+        
         className="typeSelector" 
         placeholder="Filter by type" 
         options={typesObject} 
