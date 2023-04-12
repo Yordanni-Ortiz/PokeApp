@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setName } from "../store/slices/nameUser.slice";
+import Go from "/go.png";
 
 const InputHome = ({ setIsLogged }) => {
   const { handleSubmit, reset, register } = useForm();
@@ -25,10 +26,12 @@ const InputHome = ({ setIsLogged }) => {
     <form onSubmit={handleSubmit(submit)}>
       <input
         type="text"
-        placeholder="Please, enter your name"
+        placeholder="Name"
         {...register("nameUser", { required: true })}
       />
-      <button className="button_ok" onClick={clickLogged}>Ok!</button>
+      <button className="buttonGo" onClick={clickLogged}>
+        <img src={Go} className="imageGo" alt="" />
+      </button>
     </form>
   );
 };

@@ -44,7 +44,7 @@ const PokeFilter = () => {
       setNoResults(true);
     } else {
       setNoResults(false);
-    };
+    }
 
     setPokemons(searchResult.slice(0, perPage));
     setPage(1); // reiniciar la página al buscar
@@ -73,7 +73,9 @@ const PokeFilter = () => {
         />
       </div>
       <div className="removeFilter">
-        <button className="removeFilterText" onClick={removeFilter}>Remove filter</button>
+        <button className="removeFilterText" onClick={removeFilter}>
+          Remove filter
+        </button>
       </div>
       <div className="inputSelector">
         <InputSelector />
@@ -96,6 +98,14 @@ const PokeFilter = () => {
       </div>
       <div className="pagesInferior">
         <PaginationFilter page={page} setPage={changePage} max={max} />
+      </div>
+      <div className="divUpButtonFilter">
+        <button
+          className="upButtonFilter"
+          onClick={() => window.scrollTo({ top: 5, behavior: "smooth" })}
+        >
+          <i className="fa-solid fa-angle-up fa-2x"></i>
+        </button>
       </div>
     </article>
   );

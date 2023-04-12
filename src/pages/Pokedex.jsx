@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import InputSelector from "../components/InputSelector";
 import Pagination from "../components/Pagination";
 import PokeCard from "../components/PokeCard";
-import PokedexPro from "/PokedexPro.png";
+import pokedex from "/Pokedex.png";
 import Alert from "../../public/AlertPokemon.png";
 
 const Pokedex = () => {
@@ -38,6 +38,13 @@ const Pokedex = () => {
     e.preventDefault();
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const filterer = (searchTerm) => {
     let searchResult = pokemonsTable.filter((element) => {
       if (
@@ -59,13 +66,13 @@ const Pokedex = () => {
   return (
     <article className="principalCard">
       <div className="header">
-        <img src={PokedexPro} alt="" />
-        <h3>Welcome {nameUser}, ready to catch your Pokemon?</h3>
+        <img src={pokedex} alt="" />
+        <h3>Welcome {nameUser} prepare for trouble?</h3>
       </div>
       <div className="filter">
         <input
           type="text"
-          placeholder="Search Pokemon"
+          placeholder="Search Pokémon"
           value={search}
           onChange={handleChange}
         />
@@ -91,6 +98,12 @@ const Pokedex = () => {
       <div className="pages">
         <Pagination page={page} setPage={setPage} max={max} />
       </div>
+      <button
+        className="upButton"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        <i className="fa-solid fa-angle-up fa-2x"></i>
+      </button>
     </article>
   );
 };

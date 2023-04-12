@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
 }
-body{
-  background-image: url('/FondoDark.png');
+body {
+  background-image: url("/FondoDark.png");
   background-repeat: no-repeat;
-  background-size: 100%;  
+  background-size: 100%;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -15,19 +15,23 @@ body{
   color: white;
   display: block;
 }
+.NavBar .pinRocket:hover {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease-in-out;
+}
 .NavBar img {
-  width: 80px;
+  width: 60px;
   display: flex;
   justify-content: start;
   padding-top: 11px;
   margin-left: 40px;
   max-width: 100%;
 }
-.NavBar .pokeCenter{
-  width: 40px;
-  margin: 0;
+.NavBar .pokeCenter {
+  width: 50px;
+  margin-top: 40px;
+  margin-right: 30px;
   padding-top: 0;
-  padding-right: 10px;
 }
 .NavBar ul {
   display: flex;
@@ -35,16 +39,12 @@ body{
   justify-content: flex-end;
   margin-top: -90px;
 }
-.NavBar li {
-  padding: 3px 40px;
-}
 .NavBar li:hover {
-  margin-top: -3px;
+  margin-top: -5px;
 }
 .NavBar {
   margin-bottom: 20px;
   height: 50px;
-  border-bottom: solid white ;
 }
 .navtext {
   color: white;
@@ -57,20 +57,13 @@ body{
 }
 .home img {
   max-width: 100%;
-
 }
 .home h2 {
   font-size: 30px;
-  font-family: 'Pokemon Solid';
-  text-shadow: 
-    -2px -2px 0 black,
-    -2px  2px 0 black,
-    2px -2px 0 black,
-    2px  2px 0 black,
-    -3px -3px 0 black,
-    -3px  3px 0 black,
-    3px -3px 0 black,
-    3px  3px 0 black;
+  font-family: "Pokemon Solid";
+  text-shadow: -2px -2px 0 black, -2px 2px 0 black, 2px -2px 0 black,
+    2px 2px 0 black, -3px -3px 0 black, -3px 3px 0 black, 3px -3px 0 black,
+    3px 3px 0 black;
   -webkit-text-fill-color: white; /* Color del texto Home */
   margin-top: 20px;
   margin-bottom: -40px;
@@ -78,113 +71,128 @@ body{
 }
 .home p {
   font-size: 20px;
-  font-family: 'Pokemon Solid';
-  text-shadow: 
-    -2px -2px 0 black,
-    -2px  2px 0 black,
-    2px -2px 0 black,
-    2px  2px 0 black,
-    -3px -3px 0 black,
-    -3px  3px 0 black,
-    3px -3px 0 black,
-    3px  3px 0 black;
+  font-family: "Pokemon Solid";
+  text-shadow: -2px -2px 0 black, -2px 2px 0 black, 2px -2px 0 black,
+    2px 2px 0 black, -3px -3px 0 black, -3px 3px 0 black, 3px -3px 0 black,
+    3px 3px 0 black;
   -webkit-text-fill-color: white; /* Color del texto  Home*/
   letter-spacing: 3px;
 }
-.pokeLogo{
-  width: 44%;
-}
-.Arbok{
+.Weezing {
   position: absolute;
-  width: 15%;
+  width: 14%;
+  padding-left: 28%;
 }
-.Weezing{
-  position: absolute;
-  width: 15%;
-  padding-left: 40%;
-}
-.Wobbuffet{
+.Wobbuffet {
   position: absolute;
   width: 15%;
   display: flex;
   justify-content: flex-start;
-  padding-left: 15%;
+  padding-left: 19%;
   padding-top: 8%;
 }
-.Arbok{
+.Arbok {
   position: absolute;
-  width: 15%;
+  width: 12%;
   padding-left: 25%;
-  padding-top: 15%;
+  padding-top: 13.5%;
+  z-index: -1;
+  transition: transform 0.2s ease-in-out;
 }
-.TeamRocket{
-  width: 30%;
+.TeamRocket {
+  width: 20%;
+}
+.NintendoSwitch {
+  width: 35%;
+  /*padding-top: 5%;*/
+  position: absolute;
+  display: flex;
+  padding-left: 32.4%;
+  z-index: -1;
+}
+.Pokedex {
+  width: 25%;
+  margin-top: -50px;
 }
 .form {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 20px;
+  padding-left: 7px;
 }
 .form input {
-  font-family: 'Pokemon Solid';
+  font-family: "Pokemon Solid";
   letter-spacing: 2px;
   border-radius: 20px;
-  width: 35%;
+  width: 15%;
   min-width: 250px;
   margin-right: 10px;
-  height: 30px;
+  height: 25px;
   padding: 0px 0px 5px 15px;
   font-size: 15px;
-  background-color: #332626;
-  color: white; /* Color del input Home */
-  border: solid 1px white;
   outline: none;
+  background-color: #281f1f00;
+  color: white; /* Color del input Home */
+  border: none;
+  border-bottom: solid 2px rgba(189, 21, 139, 0.58);
+  -webkit-text-stroke: 1px black;
 }
 .form button {
-  font-family: 'Pokemon Solid';
-  letter-spacing: 2px;
-  padding: 5px 10px;
-  border-radius: 15px;
   cursor: pointer;
   border: none;
-  font-size: 15px;
+  border-style: none;
   padding-top: 0px;
-  background-color: #332626;
-  color: white; /* Color del button Home */
-  border: solid 1px;
-  height: 40px;
+  background-color: transparent;
+  height: 50%;
+  width: 5%;
+  min-width: 80px;
+  animation: shake 1s linear infinite;
 }
-.button_ok {
-  display: inline-flex;
+.footer img:hover {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease-in-out;
+}
+@keyframes shake {
+  50% {
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.buttonGo {
+  display: flex;
   align-items: center;
+  margin-left: 47%;
+  margin-top: 30px;
+  margin-bottom: -20px;
+}
+.imageGo {
+  width: 140%;
 }
 .principalCard {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.principalCard .header img{
+.principalCard .header img {
   width: 20%;
 }
-.header h3{
-  font-family: 'Pokemon Solid';
+.header h3 {
+  font-family: "Pokemon Solid";
   letter-spacing: 2px;
   font-size: 20px;
-  text-shadow: 
-    -2px -2px 0 black,
-    -2px  2px 0 black,
-    2px -2px 0 black,
-    2px  2px 0 black,
-    -3px -3px 0 black,
-    -3px  3px 0 black,
-    3px -3px 0 black,
-    3px  3px 0 black;
+  text-shadow: -2px -2px 0 black, -2px 2px 0 black, 2px -2px 0 black,
+    2px 2px 0 black, -3px -3px 0 black, -3px 3px 0 black, 3px -3px 0 black,
+    3px 3px 0 black;
   -webkit-text-fill-color: white; /* Color del texto  Pokedex*/
   padding-top: 10px;
 }
 .pokeCard {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: rgba(109, 106, 106, 0.498);
-  max-width: 200px; 
+  max-width: 200px;
   width: 100%;
   /*max-height: 314px;
   height: 100%;*/
@@ -195,29 +203,26 @@ body{
   cursor: pointer;
   border: 4px solid rgba(255, 225, 225, 0.5);
   transition: 0.25s;
-  filter: drop-shadow(5px 5px 4px #fff );
+  filter: drop-shadow(5px 5px 4px #fff);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
 .pokeCard:hover {
   transform: translateY(-10px);
-  box-shadow: 1px 1px 8px ;
+  box-shadow: 1px 1px 8px;
 }
 .namePokemon {
-  font-family: 'Pokemon Solid';
+  font-family: "Pokemon Solid";
   letter-spacing: 3px;
   font-size: 20px;
-  text-shadow: 
-    -2px -2px 0 black,
-    -2px  2px 0 black,
-    2px -2px 0 black,
-    2px  2px 0 black,
-    -3px -3px 0 black,
-    -3px  3px 0 black,
-    3px -3px 0 black,
-    3px  3px 0 black;
+  text-shadow: -2px -2px 0 black, -2px 2px 0 black, 2px -2px 0 black,
+    2px 2px 0 black, -3px -3px 0 black, -3px 3px 0 black, 3px -3px 0 black,
+    3px 3px 0 black;
   -webkit-text-fill-color: white; /* Color del texto  Pokecard*/
   margin-top: -25px;
+}
+.pokeColors {
+  background-color: #2e322a50;
 }
 .pokeColors.fighting {
   background-color: #a52a2a54;
@@ -271,6 +276,9 @@ body{
   background-color: #ee82ee50;
 }
 
+.pokeColorsText {
+  color: #2e322a50;
+}
 .pokeColorsText.fighting {
   color: #a52a2a54;
 }
@@ -327,21 +335,41 @@ body{
   max-height: 180px;
   margin-top: -80px;
 }
-.pokeCard .pok {
+.pokeCard .pokemon {
   position: relative;
   left: 0;
   top: 0;
   transition: all 0.5s ease-out;
   filter: drop-shadow(5px 5px 4px black);
 }
-.pokeCard:hover .pok {
-  left: 10px;
+.pokeCard:hover .pokemon {
+  left: 20px;
   top: -30px;
 }
-.pokeCard:active .pok {
+.pokeCard:active .pokemon {
   left: 10px;
   top: -5px;
   transition: none;
+}
+.pokeCard .pokeRocket {
+  position: relative;
+  left: 90px;
+  width: 35px;
+  height: 25px;
+  top: -20px;
+  margin-bottom: -25px;
+  z-index: 1;
+}
+.pokeCard .pokeRocket {
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .pokeCard h2 {
   margin-bottom: 10px;
@@ -359,16 +387,44 @@ body{
   gap: 5px 20px;
   margin-top: 10px;
   height: 130px;
-  font-family: 'Pokemon Solid';
+  font-family: "Pokemon Solid";
   letter-spacing: 3px;
   font-size: 13px;
   -webkit-text-stroke: 0.5px black;
 }
+.pokemonId {
+  font-family: "Pokemon Solid";
+  letter-spacing: 3px;
+  font-size: 15px;
+  -webkit-text-stroke: 0.5px black;
+  margin-top: -20px;
+  margin-bottom: 0 !important;
+}
+.upButton {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.divUpButtonFilter {
+  padding-top: 90px;
+  margin-bottom: -100px;
+}
+.upButtonFilter {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.pokedexHand {
+  margin-top: 25px;
+  height: 40px;
+}
 .infoCard p {
   line-height: 1.6;
 }
-.infoCard .b2{
-  color:rgb(255, 255, 255);
+.infoCard .b2 {
+  color: rgb(255, 255, 255);
 }
 .header {
   width: 100%;
@@ -393,7 +449,8 @@ body{
   justify-content: center;
 }
 .filter input {
-  border: solid 1px white;
+  font-family: "Pokemon Solid";
+  letter-spacing: 2px;
   border-radius: 10px;
   width: 30%;
   min-width: 200px;
@@ -402,10 +459,11 @@ body{
   padding: 0px 0px 5px 15px;
   font-size: 15px;
   outline: none;
-  background-color: #332626;
-  color: white;
-  font-family: 'Pokemon Solid';
-  letter-spacing: 2px;
+  background-color: #281f1f00;
+  color: white; /* Color del input Home */
+  border: none;
+  border-bottom: solid 2px rgba(189, 21, 139, 0.58);
+
   -webkit-text-stroke: 1px black;
 }
 .filter button {
@@ -420,7 +478,7 @@ body{
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 40px;
-  font-family: 'Pokemon Solid';
+  font-family: "Pokemon Solid";
   letter-spacing: 3px;
   font-size: 13px;
   -webkit-text-stroke: 0.5px black;
@@ -431,10 +489,10 @@ body{
   margin-bottom: 20px;
   padding-bottom: 20px;
   margin-top: 120px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: rgb(11, 2, 58);
   border: 4px solid rgba(255, 225, 225, 0.5);
-  filter: drop-shadow(5px 5px 4px #fff );
+  filter: drop-shadow(5px 5px 4px #fff);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
@@ -458,8 +516,8 @@ body{
   display: flex;
   justify-content: center;
 }
-.movesBox { 
-  max-height: 20px; 
+.movesBox {
+  max-height: 20px;
   height: 10%;
 }
 .abilities {
@@ -467,10 +525,10 @@ body{
   margin-left: 30px;
   border-radius: 20px;
   margin-right: 10px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: rgb(11, 2, 58);
   border: 4px solid rgba(255, 225, 225, 0.5);
-  filter: drop-shadow(5px 5px 4px #fff );
+  filter: drop-shadow(5px 5px 4px #fff);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
@@ -479,10 +537,10 @@ body{
   margin-right: 30px;
   border-radius: 20px;
   margin-left: 10px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: rgb(11, 2, 58);
   border: 4px solid rgba(255, 225, 225, 0.5);
-  filter: drop-shadow(5px 5px 4px #fff );
+  filter: drop-shadow(5px 5px 4px #fff);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
@@ -513,7 +571,7 @@ body{
   margin: 10px 20px;
 }
 .divition1 .b2 {
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 .divition2 {
   display: flex;
@@ -522,7 +580,7 @@ body{
 .divition2 p {
   margin: 10px 20px;
   font-size: 18px;
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 .divition3 {
   display: flex;
@@ -531,26 +589,26 @@ body{
 .divition3 p {
   margin: 10px 20px;
   font-size: 18px;
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 .goBackButton {
-  width: 80%;
+  width: 50%;
+  margin-bottom: -70px;
 }
 .goBack {
-  font-family: 'Pokemon Solid';
-  letter-spacing: 2px;
-  line-height: 0.7;
-  display: inline-flex;
-  justify-content: center;
-  align-items: top;
-  height: 40px;
-  margin: 20px;
-  width: 150px;
- 
-  border-radius: 10px;
-  border: solid 1px;
+  background-color: transparent;
+  border: none;
+}
+.imageBack {
+  width: 100px;
   cursor: pointer;
-  font-size: 16px;
+}
+.imageBack:hover {
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25);
 }
 .cards {
   display: flex;
@@ -575,7 +633,7 @@ body{
   display: flex;
 }
 .pagination button {
-  font-family: 'Pokemon Solid';
+  font-family: "Pokemon Solid";
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -611,7 +669,7 @@ body{
   height: 100px;
 }
 .footer img {
-  width: 4%;
+  width: 3%;
   position: relative;
 }
 .footer div {
@@ -663,9 +721,8 @@ body{
   height: 35px;
 }
 .removeFilterText {
-  font-family: 'Pokemon Solid';
+  font-family: "Pokemon Solid";
   letter-spacing: 2px;
-
   display: flex;
   justify-content: center;
   -webkit-text-stroke: 0.5px black;
@@ -677,10 +734,10 @@ body{
   margin-bottom: 20px;
   padding-bottom: 20px;
   margin-top: 20px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: rgb(11, 2, 58);
   border: 4px solid rgba(255, 225, 225, 0.5);
-  filter: drop-shadow(5px 5px 4px #fff );
+  filter: drop-shadow(5px 5px 4px #fff);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
@@ -705,48 +762,45 @@ body{
 .pokeMoves p {
   font-size: 18px;
 }
-button{
+button {
   background-color: #332626;
   margin: 10px;
   padding: 10px 15px;
   color: white;
   border-radius: 10px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   transition: all 0.25s;
 }
-.bg-move {
-  background-color: #332626;
+.bgMove {
   margin: 10px;
-  padding: 10px 15px;
+  padding: 5px 15px 15px;
   color: white;
   border-radius: 10px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   transition: all 0.25s;
-  font-family: 'Pokemon Solid';
+  font-family: "Pokemon Solid";
   letter-spacing: 2px;
   line-height: 1;
- 
 }
-.bg-move:hover {
+.bgMove:hover {
   transform: translateY(-5px);
-  box-shadow: 1px 1px 8px ;
+  box-shadow: 1px 1px 8px;
 }
 .pageButton.active {
   background-color: #006699;
   color: #fff;
 }
-.typeSelector{
+.typeSelector {
   display: block;
   font-size: 16px;
   color: #444; /* LETRAS */
   line-height: 1.3;
-  padding: .4em 1.4em .3em .8em;
+  padding: 0.4em 1.4em 0.3em 0.8em;
   width: 300px;
-  max-width: 100%; 
+  max-width: 100%;
   text-transform: uppercase;
 }
 
-@media (max-width: 668px) { 
+@media (max-width: 668px) {
   .divition2 {
     display: block;
   }
@@ -791,15 +845,31 @@ button{
     font-size: 12px;
   }
   .form button {
-  border-radius: 12px;
-  font-size: 10px;
-  padding-top: 0px;
-  height: 30px;
-  width: 35px;
-  display: inline-flex;
-  justify-content: center;
+    height: 80px;
+    width: 35px;
   }
-  .header h3{
+  .Pokedex {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  .TeamRocket {
+    width: 35%;
+  }
+  .Wobbuffet {
+    width: 23%;
+    margin-top: 10px;
+    margin-left: -40px;
+  }
+  .Weezing {
+    width: 25%;
+    margin-top: -40px;
+    margin-left: 20px;
+  }
+  .Arbok {
+    width: 20%;
+    margin-left: 20px;
+  }
+  .header h3 {
     font-size: 12px;
     -webkit-text-stroke: 0.5px black;
   }
@@ -810,5 +880,14 @@ button{
     height: 25px;
     font-size: 8px;
   }
-
- }
+  .NavBar .pinRocket {
+    width: 40px;
+    margin-left: 15px;
+  }
+  .imageBack {
+    width: 60px;
+  }
+  .buttonGo {
+    margin-left: 41%;
+  }
+}
