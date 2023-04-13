@@ -9,8 +9,10 @@ import InputHome from "../components/InputHome";
 const Home = ({ setIsLogged }) => {
   return (
     <div className="home">
-      <img src={Pokedex} alt="home image" className="Pokedex" />
-      <div>
+      <div className="homePokedex">
+        <img src={Pokedex} alt="home image" className="Pokedex" />
+      </div>
+      <div className="homeTeamRocket">
         <img src={Arbok} alt="home image" className="Arbok" />
         <img src={Weezing} alt="home image" className="Weezing" />
         <img src={Wobbuffet} alt="home image" className="Wobbuffet" />

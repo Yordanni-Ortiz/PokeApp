@@ -9,16 +9,30 @@ import GSBall from "/GSBall.png";
 
 const Footer = () => {
   return (
-    <article className="footer">
+    <article className="footer homeFooter">
       <footer>
         <div className="footer-img">
-          <img src={SuperBall} alt="" />
-          <img src={SafariBall} alt="" />
-          <img src={UltraBall} alt="" />
-          <img src={PokeBall} alt="" />
-          <img src={NidoBall} alt="" />
-          <img src={MasterBall} alt="" />
-          <img src={GSBall} alt="" />
+        <div className="footer-img-item">
+      <img src={SuperBall} alt="" />
+    </div>
+    <div className="footer-img-item">
+      <img src={SafariBall} alt="" />
+    </div>
+    <div className="footer-img-item">
+      <img src={UltraBall} alt="" />
+    </div>
+    <div className="footer-img-item">
+      <img src={PokeBall} alt="" />
+    </div>
+    <div className="footer-img-item">
+      <img src={NidoBall} alt="" />
+    </div>
+    <div className="footer-img-item">
+      <img src={MasterBall} alt="" />
+    </div>
+    <div className="footer-img-item">
+      <img src={GSBall} alt="" />
+    </div>
         </div>
       </footer>
     </article>

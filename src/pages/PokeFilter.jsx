@@ -72,11 +72,6 @@ const PokeFilter = () => {
           onChange={handleChange}
         />
       </div>
-      <div className="removeFilter">
-        <button className="removeFilterText" onClick={removeFilter}>
-          Remove filter
-        </button>
-      </div>
       <div className="inputSelector">
         <InputSelector />
       </div>
