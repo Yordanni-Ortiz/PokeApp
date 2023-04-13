@@ -1,10 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import PaginationFilter from "../components/PaginationFilter";
 import PokeCardFilter from "../components/PokeCardFilter";
 import InputSelector from "../components/InputSelector";
 import Alert from "../../public/AlertPokemon.png";
+import pokedex from "/Pokedex.png";
 
 const PokeFilter = () => {
   const [typePokemon, setTypePokemon] = useState();
@@ -15,6 +17,7 @@ const PokeFilter = () => {
   const [perPage, setPerPage] = useState(25);
   const [noResults, setNoResults] = useState(false);
   const { type } = useParams();
+  const nameUser = useSelector((state) => state.nameUser);
 
   useEffect(() => {
     axios
@@ -64,6 +67,10 @@ const PokeFilter = () => {
 
   return (
     <article className="principalCardFilter">
+      <div className="header">
+        <img src={pokedex} alt="" />
+        <h3>Welcome {nameUser} prepare for trouble?</h3>
+      </div>
       <div className="filter">
         <input
           type="text"

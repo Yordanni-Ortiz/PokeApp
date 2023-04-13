@@ -198,7 +198,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
-.principalCard .header img {
+.header img {
   width: 20%;
   padding-top: 20px;
   margin-bottom: -30px;
@@ -908,7 +908,7 @@ button {
     margin-left: 20px;
   }
   .header h3 {
-    font-size: 12px;
+    font-size: 10px;
     -webkit-text-stroke: 0.5px black;
   }
   .pagination button {
@@ -936,5 +936,10 @@ button {
     top: 40%;
     transform: translateY(40%);
     
+  }
+.header img {
+    width: 35%;
+    padding-top: 1px;
+    margin-bottom: -20px;
   }
 }

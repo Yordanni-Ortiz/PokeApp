@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import React from "react";
 import PokeBall from "/PokeBall.png";
 import SuperBall from "/SuperBall.png";
@@ -8,8 +9,11 @@ import NidoBall from "/NidoBall.png";
 import GSBall from "/GSBall.png";
 
 const Footer = () => {
+  const location = useLocation();
+  const isOtherPage = location.pathname !== '/';
+
   return (
-    <article className="footer homeFooter">
+    <article className={`footer ${isOtherPage ? 'homeFooter' : ''}`}>
       <footer>
         <div className="footer-img">
         <div className="footer-img-item">
