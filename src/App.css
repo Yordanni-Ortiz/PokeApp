@@ -3,8 +3,8 @@
   padding: 0;
 }
 @font-face {
-  font-family: 'Pokemon Solid';
-  src: url('../public/fonts/Pokemon Solid.ttf') format('truetype');
+  font-family: "Pokemon Solid";
+  src: url("../public/fonts/Pokemon Solid.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -47,6 +47,7 @@ body {
   list-style: none;
   justify-content: flex-end;
   margin-top: -90px;
+  margin-right: 50px;
 }
 .NavBar li:hover {
   margin-top: -5px;
@@ -442,7 +443,6 @@ body {
 }
 .pokedexHand {
   margin-top: 25px;
-  height: 40px;
 }
 .infoCard p {
   line-height: 1.6;
@@ -691,7 +691,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100px;
-
 }
 .homeFooter {
   position: relative;
@@ -699,7 +698,7 @@ body {
 .footer img {
   width: 3%;
   position: absolute;
-  bottom: 30px; 
+  bottom: 30px;
 }
 .footer-img {
   display: flex;
@@ -854,7 +853,7 @@ button {
   }
   .footer div {
     gap: 6%;
-    bottom: 30px; 
+    bottom: 30px;
     left: 0;
   }
   .footer img {
@@ -925,8 +924,12 @@ button {
   .imageBack {
     width: 60px;
   }
-  .pokedexHand {
-    height: 20px;
+  li * {
+    display: block;
+    margin-right: 20px;
+    padding-top: 20px;
+    height: 35px;
+    width: 40px;
   }
   .buttonGo {
     margin-left: 41%;
@@ -935,9 +938,8 @@ button {
     position: absolute;
     top: 40%;
     transform: translateY(40%);
-    
   }
-.header img {
+  .header img {
     width: 35%;
     padding-top: 1px;
     margin-bottom: -20px;

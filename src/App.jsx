@@ -23,15 +23,15 @@ function App() {
         <img className="pinRocket" src={PinRocket} />
         <div className="pokeCenterDiv">
           <ul>
-            <li>
-              <Link className="navIcon1d" to="/pokedex">
+            <li className="navIconPokedexHand">
+              <Link to="/pokedex">
                 {!isHome && (
                   <img src={pokedexHand} alt="" className="pokedexHand" />
                 )}
               </Link>
             </li>
-            <li>
-              <Link className="navIcon" to="/">
+            <li className="navIconPokeCenter">
+              <Link to="/">
                 {!isHome && (
                   <img src={pokeCenter} alt="" className="pokeCenter" />
                 )}

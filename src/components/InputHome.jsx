@@ -26,7 +26,7 @@ const InputHome = ({ setIsLogged }) => {
     <form onSubmit={handleSubmit(submit)}>
       <input
         type="text"
-        placeholder="Name"
+        placeholder=" Name"
         {...register("nameUser", { required: true })}
       />
       <button className="buttonGo" onClick={clickLogged}>

@@ -74,7 +74,7 @@ const PokeFilter = () => {
       <div className="filter">
         <input
           type="text"
-          placeholder="Search Pokemon"
+          placeholder=" Search Pokemon"
           value={search}
           onChange={handleChange}
         />

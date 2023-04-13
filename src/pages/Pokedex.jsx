@@ -72,7 +72,7 @@ const Pokedex = () => {
       <div className="filter">
         <input
           type="text"
-          placeholder="Search Pokémon"
+          placeholder=" Search Pokémon"
           value={search}
           onChange={handleChange}
         />
