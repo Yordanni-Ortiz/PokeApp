@@ -8,9 +8,6 @@
   font-weight: normal;
   font-style: normal;
 }
-.react-select__control {
-  background-color: #ff00e6;
-}
 body {
   background-image: url("/FondoDark.png");
   background-repeat: no-repeat;
@@ -487,7 +484,6 @@ body {
   color: white; /* Color del input Home */
   border: none;
   border-bottom: solid 2px rgba(189, 21, 139, 0.58);
-
   -webkit-text-stroke: 1px black;
 }
 .filter button {
@@ -677,7 +673,7 @@ body {
   width: 50px;
   border-radius: 10px;
   border: solid 1px;
-  background-color: #332626;
+  background-color: #d20fbb;
   color: white;
 }
 .pagination p {
