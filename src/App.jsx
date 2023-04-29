@@ -1,45 +1,20 @@
 import "./App.css";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Pokedex from "./pages/Pokedex";
 import PokeInfo from "./pages/PokeInfo";
-import PinRocket from "/PinRocket.png";
-import pokeCenter from "/CentroPokemon.png";
-import pokedexHand from "/pokedexHand.png";
 import Footer from "./components/Footer";
 import PokeFilter from "./pages/PokeFilter";
 import ProtectedRoutes from "./pages/ProtectedRoutes";
 
 function App() {
   const [isLogged, setIsLogged] = useState(false);
-  const location = useLocation();
-  const isHome = location.pathname === "/";
 
   return (
     <div className="App">
-      <nav className="NavBar">
-        <img className="pinRocket" src={PinRocket} />
-        <div className="pokeCenterDiv">
-          <ul>
-            <li className="navIconPokedexHand">
-              <Link to="/pokedex">
-                {!isHome && (
-                  <img src={pokedexHand} alt="" className="pokedexHand" />
-                )}
-              </Link>
-            </li>
-            <li className="navIconPokeCenter">
-              <Link to="/">
-                {!isHome && (
-                  <img src={pokeCenter} alt="" className="pokeCenter" />
-                )}
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <NavBar/>
       <Routes>
         <Route path="/" element={<Home setIsLogged={setIsLogged} />} />
         <Route element={<ProtectedRoutes isLogged={isLogged} />}>
