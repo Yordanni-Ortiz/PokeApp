@@ -67,7 +67,7 @@ const Pokedex = () => {
     <article className="principalCard">
       <div className="header">
         <img src={pokedex} alt="" />
-        <h3>Welcome {nameUser} prepare for trouble?</h3>
+        <h3>Welcome, {nameUser}. Prepare for trouble?</h3>
       </div>
       <div className="filter">
         <input
