@@ -19,6 +19,18 @@ body {
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
 }
+::-webkit-scrollbar {
+  background: rgba(0, 0, 0, 0.979);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(39, 1, 35, 0.979);
+  border-radius: 10px;
+}
 .App {
   text-align: center;
   color: white;
